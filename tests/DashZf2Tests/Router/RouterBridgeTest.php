@@ -46,5 +46,36 @@ class RouterBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($routerBridge->match($httpRequestMock));
     }
 
+    public function testAssemble()
+    {
+        $dashRouterMock = $this->getMock('Dash\Router\Http\Router', array(), array(), '', false);
+        $dashRouterMock->expects($this->once())->method('assemble')->will($this->returnValue('brannigan'));
+
+        $routerBridge = new RouterBridge($dashRouterMock);
+
+        $this->assertEquals('brannigan', $routerBridge->assemble());
+    }
+
+    public function testAddRoute()
+    {
+        $routeCollectionMock = $this->getMock(
+            'Dash\Router\Http\RouteCollection\RouteCollection',
+            array(),
+            array(),
+            '',
+            false
+        );
+
+        $dashRouterMock = $this->getMock('Dash\Router\Http\Router', array(), array(), '', false);
+        $dashRouterMock->expects($this->once())->method('getRouteCollection')->will(
+            $this->returnValue($routeCollectionMock)
+        );
+
+        $routerBridge = new RouterBridge($dashRouterMock);
+
+
+        $routerBridge->addRoute('kiff', '/kiff', 1);
+    }
+
 }
  

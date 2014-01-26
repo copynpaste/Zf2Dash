@@ -7,7 +7,6 @@
 
 namespace DashZf2\Router;
 
-
 use Dash\Router\Http\Router;
 use Zend\Mvc\Router\RouteMatch;
 use Zend\Mvc\Router\RouteStackInterface;
@@ -30,10 +29,12 @@ class RouterBridge implements RouteStackInterface
      *
      * @param  array|\Traversable $options
      * @return void
+     * @throws \Exception
      */
     public static function factory($options = array())
     {
-        // TODO: Implement factory() method.
+        throw new \Exception('I have no idea what this does');
+        // @todo Understand what this does
     }
 
     /**
@@ -79,7 +80,7 @@ class RouterBridge implements RouteStackInterface
      */
     public function assemble(array $params = array(), array $options = array())
     {
-        // TODO: Implement assemble() method.
+        return $this->dashRouter->assemble($params, $options);
     }
 
     /**
@@ -92,7 +93,8 @@ class RouterBridge implements RouteStackInterface
      */
     public function addRoute($name, $route, $priority = null)
     {
-        // TODO: Implement addRoute() method.
+        $this->dashRouter->getRouteCollection()->insert($name, $route, $priority);
+        return $this;
     }
 
     /**
@@ -103,7 +105,10 @@ class RouterBridge implements RouteStackInterface
      */
     public function addRoutes($routes)
     {
-        // TODO: Implement addRoutes() method.
+        foreach ($routes as $name => $route) {
+            $this->addRoute($name, $route);
+        }
+        return $this;
     }
 
     /**
@@ -114,7 +119,7 @@ class RouterBridge implements RouteStackInterface
      */
     public function removeRoute($name)
     {
-        // TODO: Implement removeRoute() method.
+        $this->dashRouter->getRouteCollection()->remove($name);
     }
 
     /**
@@ -125,7 +130,8 @@ class RouterBridge implements RouteStackInterface
      */
     public function setRoutes($routes)
     {
-        // TODO: Implement setRoutes() method.
+        $this->dashRouter->getRouteCollection()->clear();
+        $this->addRoutes($routes);
     }
 
 }
