@@ -2,7 +2,7 @@
 return [
     'service_manager' => [
         'factories' => [
-            'Router' => 'DashZf2\Router\RouterFactory'
+            'Router' => 'Zf2Dash\Router\RouterFactory'
         ],
     ],
 ];

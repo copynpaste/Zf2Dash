@@ -5,9 +5,9 @@
  * Time: 15:53
  */
 
-namespace DashZf2Test\Router;
+namespace Zf2DashTest\Router;
 
-use DashZf2\Router\RouterBridge;
+use Zf2Dash\Router\RouterBridge;
 
 class RouterBridgeTest extends \PHPUnit_Framework_TestCase
 {

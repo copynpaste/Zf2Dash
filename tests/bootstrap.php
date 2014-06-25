@@ -14,5 +14,5 @@ if  (
     throw new RuntimeException('vendor/autoload.php could not be found. Did you run `php composer.phar install`?');
 }
 
-$loader->add('DashZf2Test\\', __DIR__);
-$loader->add('DashZf2', __DIR__ . '/../src');
+$loader->add('Zf2DashTest\\', __DIR__);
+$loader->add('Zf2Dash', __DIR__ . '/../src');

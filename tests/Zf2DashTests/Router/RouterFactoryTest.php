@@ -5,10 +5,10 @@
  * Time: 15:47
  */
 
-namespace DashZf2Test\Router;
+namespace Zf2DashTest\Router;
 
 
-use DashZf2\Router\RouterFactory;
+use Zf2Dash\Router\RouterFactory;
 
 class RouterFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,7 +20,7 @@ class RouterFactoryTest extends \PHPUnit_Framework_TestCase
         $mockServiceLocator->expects($this->once())->method('get')->with('Dash\Router\Http\Router')->will(
             $this->returnValue($mockRouter)
         );
-        $this->assertInstanceOf('DashZf2\Router\RouterBridge', $factory->createService($mockServiceLocator));
+        $this->assertInstanceOf('Zf2Dash\Router\RouterBridge', $factory->createService($mockServiceLocator));
     }
 }
  

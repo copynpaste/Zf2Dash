@@ -5,7 +5,7 @@
  * Time: 15:45
  */
 
-namespace DashZf2\Router;
+namespace Zf2Dash\Router;
 
 
 use Zend\ServiceManager\FactoryInterface;

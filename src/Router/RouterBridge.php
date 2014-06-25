@@ -5,7 +5,7 @@
  * Time: 15:52
  */
 
-namespace DashZf2\Router;
+namespace Zf2Dash\Router;
 
 use Dash\Router\Http\Router;
 use Zend\Mvc\Router\RouteMatch;

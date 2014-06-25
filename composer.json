@@ -1,0 +1,19 @@
+{
+    "name": "copynpaste/Zf2Dash",
+    "description": "ZF2 Bridge for Dash Router",
+    "authors": [
+        {
+            "name": "GeeH",
+            "homepage": "https://github.com/GeeH"
+        }
+    ],
+    "homepage": "https://github.com/copynpaste/Zf2Dash",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zf2Dash\\": "vendor/copynpaste/Zf2Dash/src/"
+        }
+    }
+}
