@@ -21,12 +21,6 @@ class Module implements
 
     public function getAutoloaderConfig()
     {
-        return [
-            'Zend\Loader\StandardAutoloader' => [
-                'namespaces' => [
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ],
-            ],
-        ];
+        // no more used, composer psr-4 autoloading is implemented
     }
 }

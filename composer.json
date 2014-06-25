@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Zf2Dash\\": "vendor/copynpaste/Zf2Dash/src/"
+            "Zf2Dash\\": "src/"
         }
     }
 }
