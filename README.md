@@ -15,6 +15,7 @@ Installation (Composer)
     }
 ],
 "require": {
-    "copynpaste/Zf2Dash": "dev-master"
+    "copynpaste/Zf2Dash": "dev-master",
+    "dasprid/dash":       "dev-master"
 }
 ```
