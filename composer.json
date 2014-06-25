@@ -9,8 +9,7 @@
     ],
     "homepage": "https://github.com/copynpaste/Zf2Dash",
     "require": {
-        "php":          ">=5.4",
-        "dasprid/dash": "dev-master"
+        "php": ">=5.4"
     },
     "autoload": {
         "psr-4": {
